@@ -1,8 +1,8 @@
-# D-Lab SQL Fundamentals Workshop
+# D-Lab Python SQL Fundamentals Workshop
 
 [![Datahub](https://img.shields.io/badge/launch-datahub-blue)](http://dlab.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fdlab-berkeley%2FSQL-Fundamentals&urlpath=lab%2Ftree%2FSQL-Fundamentals%2F) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dlab-berkeley/SQL-Fundamentals/HEAD) [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-This repository contains the materials for D-Lab’s SQL Fundamentals workshop series. 
+This repository contains the materials for D-Lab’s Python SQL Fundamentals workshop series. 
 
 ### Prerequisites
 No prior experience with SQL or Python is required.
@@ -12,7 +12,7 @@ Check D-Lab's [Learning Pathways](https://dlab-berkeley.github.io/dlab-workshops
 
 ## Workshop Goals
 
-This workshop introduces the fundamentals of SQL, with a focus on using SQLite (the most ubiquitous database on the planet) for data science tasks. We'll explore how SQL can be used to query and manipulate relational databases. This hands-on workshop includes exercises based on real-world datasets.
+This workshop introduces the fundamentals of SQL in Python, with a focus on using SQLite (the most ubiquitous database on the planet) for data science tasks. We'll explore how SQL can be used to query and manipulate relational databases. This hands-on workshop includes exercises based on real-world datasets.
 
 ## Learning Objectives
 
