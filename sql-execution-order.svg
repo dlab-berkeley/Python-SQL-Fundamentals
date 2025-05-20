@@ -1,0 +1,38 @@
+<svg viewBox="0 0 1250 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Boxes -->
+  <rect x="80" y="45" width="70" height="30" rx="5" ry="5" fill="white" stroke="black" />
+  <rect x="200" y="45" width="90" height="30" rx="5" ry="5" fill="white" stroke="black" />
+  <rect x="340" y="45" width="115" height="30" rx="5" ry="5" fill="white" stroke="black" />
+  <rect x="505" y="45" width="90" height="30" rx="5" ry="5" fill="white" stroke="black" />
+  <rect x="645" y="45" width="90" height="30" rx="5" ry="5" fill="white" stroke="black" />
+  <rect x="785" y="45" width="120" height="30" rx="5" ry="5" fill="white" stroke="black" />
+  <rect x="955" y="45" width="160" height="30" rx="5" ry="5" fill="white" stroke="black" />
+
+  <!-- Text -->
+  <text x="115" y="65" font-family="monospace" text-anchor="middle" font-size="14">FROM</text>
+  <text x="245" y="65" font-family="monospace" text-anchor="middle" font-size="14">WHERE</text>
+  <text x="397.5" y="65" font-family="monospace" text-anchor="middle" font-size="14">GROUP BY</text>
+  <text x="550" y="65" font-family="monospace" text-anchor="middle" font-size="14">HAVING</text>
+  <text x="690" y="65" font-family="monospace" text-anchor="middle" font-size="14">SELECT</text>
+  <text x="845" y="65" font-family="monospace" text-anchor="middle" font-size="14">ORDER BY</text>
+  <text x="1035" y="65" font-family="monospace" text-anchor="middle" font-size="14">LIMIT / OFFSET</text>
+
+  <!-- Arrows -->
+  <line x1="160" y1="60" x2="190" y2="60" stroke="black" stroke-width="1.5" />
+  <polygon points="190,60 183,57 183,63" fill="black" />
+  
+  <line x1="300" y1="60" x2="330" y2="60" stroke="black" stroke-width="1.5" />
+  <polygon points="330,60 323,57 323,63" fill="black" />
+  
+  <line x1="465" y1="60" x2="495" y2="60" stroke="black" stroke-width="1.5" />
+  <polygon points="495,60 488,57 488,63" fill="black" />
+  
+  <line x1="605" y1="60" x2="635" y2="60" stroke="black" stroke-width="1.5" />
+  <polygon points="635,60 628,57 628,63" fill="black" />
+  
+  <line x1="745" y1="60" x2="775" y2="60" stroke="black" stroke-width="1.5" />
+  <polygon points="775,60 768,57 768,63" fill="black" />
+  
+  <line x1="915" y1="60" x2="945" y2="60" stroke="black" stroke-width="1.5" />
+  <polygon points="945,60 938,57 938,63" fill="black" />
+</svg>

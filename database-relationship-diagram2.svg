@@ -1,0 +1,147 @@
+<svg viewBox="0 0 1500 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- Styles -->
+  <style>
+    .table { fill: white; stroke: black; stroke-width: 2; }
+    .header { font: bold 20px sans-serif; text-anchor: middle; }
+    .col-header { font: bold 18px sans-serif; text-anchor: middle; }
+    .data { font: 18px sans-serif; text-anchor: middle; }
+    .circle { fill: none; stroke: black; stroke-width: 2; }
+    .arrow { stroke: black; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+    .plus { font: bold 32px sans-serif; text-anchor: middle; }
+  </style>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" />
+    </marker>
+  </defs>
+  
+  <!-- Managers Table -->
+  <g transform="translate(30, 20)">
+    <text x="160" y="-5" class="header">Managers</text>
+    
+    <!-- Table outline -->
+    <rect x="0" y="0" width="320" height="160" class="table"/>
+    
+    <!-- Column divider -->
+    <line x1="160" y1="0" x2="160" y2="160" stroke="black" stroke-width="2"/>
+    
+    <!-- Row dividers -->
+    <line x1="0" y1="40" x2="320" y2="40" stroke="black" stroke-width="2"/>
+    <line x1="0" y1="80" x2="320" y2="80" stroke="black" stroke-width="2"/>
+    <line x1="0" y1="120" x2="320" y2="120" stroke="black" stroke-width="2"/>
+    
+    <!-- Headers -->
+    <text x="80" y="25" class="col-header">employee_id</text>
+    <text x="240" y="25" class="col-header">name</text>
+    
+    <!-- Circle around employee_id -->
+    <ellipse cx="80" cy="20" rx="70" ry="20" class="circle"/>
+    
+    <!-- Data -->
+    <text x="80" y="65" class="data">101</text>
+    <text x="240" y="65" class="data">Bob</text>
+    
+    <text x="80" y="105" class="data">102</text>
+    <text x="240" y="105" class="data">Alice</text>
+    
+    <text x="80" y="145" class="data">103</text>
+    <text x="240" y="145" class="data">Frank</text>
+  </g>
+  
+  <!-- Plus Sign -->
+  <text x="380" y="100" class="plus">+</text>
+  
+  <!-- Employees Table -->
+  <g transform="translate(410, 20)">
+    <text x="240" y="-5" class="header">Employees</text>
+    
+    <!-- Table outline -->
+    <rect x="0" y="0" width="480" height="200" class="table"/>
+    
+    <!-- Column dividers -->
+    <line x1="120" y1="0" x2="120" y2="200" stroke="black" stroke-width="2"/>
+    <line x1="240" y1="0" x2="240" y2="200" stroke="black" stroke-width="2"/>
+    <line x1="360" y1="0" x2="360" y2="200" stroke="black" stroke-width="2"/>
+    
+    <!-- Row dividers -->
+    <line x1="0" y1="40" x2="480" y2="40" stroke="black" stroke-width="2"/>
+    <line x1="0" y1="80" x2="480" y2="80" stroke="black" stroke-width="2"/>
+    <line x1="0" y1="120" x2="480" y2="120" stroke="black" stroke-width="2"/>
+    <line x1="0" y1="160" x2="480" y2="160" stroke="black" stroke-width="2"/>
+    
+    <!-- Headers -->
+    <text x="60" y="25" class="col-header">employee_id</text>
+    <text x="180" y="25" class="col-header">name</text>
+    <text x="300" y="25" class="col-header">reports_to</text>
+    <text x="420" y="25" class="col-header">revenue</text>
+    
+    <!-- Circle around reports_to -->
+    <ellipse cx="300" cy="20" rx="55" ry="20" class="circle"/>
+    
+    <!-- Data -->
+    <text x="60" y="65" class="data">201</text>
+    <text x="180" y="65" class="data">Carol</text>
+    <text x="300" y="65" class="data">101</text>
+    <text x="420" y="65" class="data">62000</text>
+    
+    <text x="60" y="105" class="data">202</text>
+    <text x="180" y="105" class="data">Dave</text>
+    <text x="300" y="105" class="data">101</text>
+    <text x="420" y="105" class="data">58000</text>
+    
+    <text x="60" y="145" class="data">203</text>
+    <text x="180" y="145" class="data">Erin</text>
+    <text x="300" y="145" class="data">102</text>
+    <text x="420" y="145" class="data">55000</text>
+    
+    <text x="60" y="185" class="data">204</text>
+    <text x="180" y="185" class="data">James</text>
+    <text x="300" y="185" class="data">103</text>
+    <text x="420" y="185" class="data">48000</text>
+  </g>
+  
+  <!-- Arrow with more spacing but shorter -->
+  <path d="M 910 100 L 950 100" class="arrow"/>
+  
+  <!-- Merged Table -->
+  <g transform="translate(1010, 20)">
+    <text x="220" y="-5" class="header">Merged</text>
+    
+    <!-- Table outline -->
+    <rect x="0" y="0" width="440" height="200" class="table"/>
+    
+    <!-- Column dividers -->
+    <line x1="150" y1="0" x2="150" y2="200" stroke="black" stroke-width="2"/>
+    <line x1="300" y1="0" x2="300" y2="200" stroke="black" stroke-width="2"/>
+    
+    <!-- Row dividers -->
+    <line x1="0" y1="40" x2="440" y2="40" stroke="black" stroke-width="2"/>
+    <line x1="0" y1="80" x2="440" y2="80" stroke="black" stroke-width="2"/>
+    <line x1="0" y1="120" x2="440" y2="120" stroke="black" stroke-width="2"/>
+    <line x1="0" y1="160" x2="440" y2="160" stroke="black" stroke-width="2"/>
+    
+    <!-- Headers -->
+    <text x="75" y="25" class="col-header">Manager Name</text>
+    <text x="225" y="25" class="col-header">Employee Name</text>
+    <text x="370" y="25" class="col-header">revenue</text>
+    
+    <!-- Data -->
+    <text x="75" y="65" class="data">Bob</text>
+    <text x="225" y="65" class="data">Carol</text>
+    <text x="370" y="65" class="data">62000</text>
+    
+    <text x="75" y="105" class="data">Bob</text>
+    <text x="225" y="105" class="data">Dave</text>
+    <text x="370" y="105" class="data">58000</text>
+    
+    <text x="75" y="145" class="data">Alice</text>
+    <text x="225" y="145" class="data">Erin</text>
+    <text x="370" y="145" class="data">55000</text>
+    
+    <text x="75" y="185" class="data">Frank</text>
+    <text x="225" y="185" class="data">James</text>
+    <text x="370" y="185" class="data">48000</text>
+  </g>
+</svg>
