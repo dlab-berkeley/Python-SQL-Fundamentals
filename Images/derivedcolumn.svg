@@ -1,0 +1,86 @@
+<svg width="900" height="350" xmlns="http://www.w3.org/2000/svg">
+    <!-- Title -->
+    <text x="450" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#000">
+        Creating a Derived Column with SQL
+    </text>
+    
+    <!-- Source Table -->
+    <g id="source-table">
+        <!-- Table border -->
+        <rect x="50" y="80" width="250" height="200" fill="white" stroke="#000" stroke-width="2"/>
+        
+        <!-- Header row -->
+        <rect x="50" y="80" width="250" height="40" fill="#333" stroke="#000" stroke-width="2"/>
+        <text x="100" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">name</text>
+        <text x="175" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">price</text>
+        <text x="250" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">quantity</text>
+        
+        <!-- Vertical lines -->
+        <line x1="150" y1="80" x2="150" y2="280" stroke="#000" stroke-width="1"/>
+        <line x1="200" y1="80" x2="200" y2="280" stroke="#000" stroke-width="1"/>
+        
+        <!-- Data rows -->
+        <text x="100" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">Alice</text>
+        <text x="175" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">10.50</text>
+        <text x="250" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">3</text>
+        
+        <line x1="50" y1="160" x2="300" y2="160" stroke="#ccc" stroke-width="1"/>
+        
+        <text x="100" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">Bob</text>
+        <text x="175" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">25.00</text>
+        <text x="250" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">2</text>
+        
+        <line x1="50" y1="200" x2="300" y2="200" stroke="#ccc" stroke-width="1"/>
+        
+        <text x="100" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">Charlie</text>
+        <text x="175" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">15.75</text>
+        <text x="250" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">4</text>
+        
+        <line x1="50" y1="240" x2="300" y2="240" stroke="#ccc" stroke-width="1"/>
+        
+        <text x="100" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">Diana</text>
+        <text x="175" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">8.25</text>
+        <text x="250" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">5</text>
+    </g>
+    
+    <!-- SQL Command above arrow -->
+    <rect x="330" y="60" width="220" height="60" fill="white" stroke="#000" stroke-width="1" stroke-dasharray="5,5" rx="5"/>
+    <text x="440" y="85" text-anchor="middle" font-family="monospace" font-size="11" fill="#000">
+        SELECT name || ' spent ' || 
+    </text>
+    <text x="440" y="100" text-anchor="middle" font-family="monospace" font-size="11" fill="#000">
+        (price * quantity) || ' dollars'
+    </text>
+    <text x="440" y="115" text-anchor="middle" font-family="monospace" font-size="11" fill="#000">
+        AS summary
+    </text>
+    
+    <!-- Arrow -->
+    <g id="arrow">
+        <line x1="320" y1="180" x2="580" y2="180" stroke="#000" stroke-width="3"/>
+        <polygon points="580,180 570,175 570,185" fill="#000"/>
+    </g>
+    
+    <!-- Result Table (shifted right by 60px) -->
+    <g id="result-table">
+        <!-- Table border -->
+        <rect x="600" y="80" width="260" height="200" fill="white" stroke="#000" stroke-width="2"/>
+        
+        <!-- Header row -->
+        <rect x="600" y="80" width="260" height="40" fill="#333" stroke="#000" stroke-width="2"/>
+        <text x="730" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">summary</text>
+        
+        <!-- Data rows -->
+        <rect x="600" y="120" width="260" height="40" fill="#f0f0f0"/>
+        <text x="730" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">Alice spent 31.5 dollars</text>
+        
+        <rect x="600" y="160" width="260" height="40" fill="white"/>
+        <text x="730" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">Bob spent 50 dollars</text>
+        
+        <rect x="600" y="200" width="260" height="40" fill="#f0f0f0"/>
+        <text x="730" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">Charlie spent 63 dollars</text>
+        
+        <rect x="600" y="240" width="260" height="40" fill="white"/>
+        <text x="730" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">Diana spent 41.25 dollars</text>
+    </g>
+</svg>

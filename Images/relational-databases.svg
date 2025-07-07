@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg">
+  <!-- Customers Table -->
+  <g id="customers-table">
+    <!-- Table border -->
+    <rect x="50" y="50" width="300" height="125" fill="white" stroke="black" stroke-width="2"/>
+
+    <!-- Merged title row -->
+    <rect x="50" y="50" width="300" height="35" fill="#f0f0f0" stroke="black" stroke-width="1"/>
+    <text x="200" y="72" text-anchor="middle"
+          font-family="Arial, sans-serif" font-size="16" font-weight="bold">Customers</text>
+
+    <!-- Column dividers -->
+    <line x1="50"  y1="85" x2="350" y2="85"  stroke="black" stroke-width="1"/>
+    <line x1="150" y1="85" x2="150" y2="175" stroke="black" stroke-width="1"/>
+    <line x1="250" y1="85" x2="250" y2="175" stroke="black" stroke-width="1"/>
+
+    <!-- Header row -->
+    <!-- Highlight: CustomerID is primary key (red) -->
+    <ellipse cx="100" cy="100" rx="45" ry="13"
+             fill="white" fill-opacity="0.9" stroke="red" stroke-width="2"/>
+    <text x="100" y="100" text-anchor="middle" dominant-baseline="middle"
+          font-family="Arial, sans-serif" font-size="12" font-weight="bold">CustomerID</text>
+
+    <text x="200" y="100" text-anchor="middle" dominant-baseline="middle"
+          font-family="Arial, sans-serif" font-size="12" font-weight="bold">CompanyName</text>
+    <text x="300" y="100" text-anchor="middle" dominant-baseline="middle"
+          font-family="Arial, sans-serif" font-size="12" font-weight="bold">Country</text>
+
+    <!-- Data rows -->
+    <line x1="50" y1="115" x2="350" y2="115" stroke="black" stroke-width="1"/>
+    <text x="100" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">ALFKI</text>
+    <text x="200" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Alfreds Futter</text>
+    <text x="300" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Germany</text>
+
+    <line x1="50" y1="145" x2="350" y2="145" stroke="black" stroke-width="1"/>
+    <text x="100" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">ANATR</text>
+    <text x="200" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Ana Trujillo</text>
+    <text x="300" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Mexico</text>
+  </g>
+
+  <!-- Orders Table -->
+  <g id="orders-table">
+    <!-- Table border -->
+    <rect x="450" y="50" width="300" height="155" fill="white" stroke="black" stroke-width="2"/>
+
+    <!-- Merged title row -->
+    <rect x="450" y="50" width="300" height="35" fill="#f0f0f0" stroke="black" stroke-width="1"/>
+    <text x="600" y="72" text-anchor="middle"
+          font-family="Arial, sans-serif" font-size="16" font-weight="bold">Orders</text>
+
+    <!-- Column dividers -->
+    <line x1="450" y1="85" x2="750" y2="85" stroke="black" stroke-width="1"/>
+    <line x1="540" y1="85" x2="540" y2="205" stroke="black" stroke-width="1"/>
+    <line x1="640" y1="85" x2="640" y2="205" stroke="black" stroke-width="1"/>
+
+    <!-- Header row -->
+    <!-- Circles behind text for primary and foreign keys -->
+    <ellipse cx="495" cy="100" rx="35" ry="13"
+             fill="white" fill-opacity="0.9" stroke="red"  stroke-width="2"/>
+    <ellipse cx="695" cy="100" rx="45" ry="13"
+             fill="white" fill-opacity="0.9" stroke="blue" stroke-width="2"/>
+
+    <text x="495" y="100" text-anchor="middle" dominant-baseline="middle"
+          font-family="Arial, sans-serif" font-size="12" font-weight="bold">OrderID</text>
+    <text x="590" y="100" text-anchor="middle" dominant-baseline="middle"
+          font-family="Arial, sans-serif" font-size="12" font-weight="bold">OrderDate</text>
+    <text x="695" y="100" text-anchor="middle" dominant-baseline="middle"
+          font-family="Arial, sans-serif" font-size="12" font-weight="bold">CustomerID</text>
+
+    <!-- Data rows -->
+    <line x1="450" y1="115" x2="750" y2="115" stroke="black" stroke-width="1"/>
+    <text x="495" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">10248</text>
+    <text x="590" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">1996-07-04</text>
+    <text x="695" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">ALFKI</text>
+
+    <line x1="450" y1="145" x2="750" y2="145" stroke="black" stroke-width="1"/>
+    <text x="495" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">10249</text>
+    <text x="590" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">1996-07-05</text>
+    <text x="695" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">ANATR</text>
+
+    <line x1="450" y1="175" x2="750" y2="175" stroke="black" stroke-width="1"/>
+    <text x="495" y="193" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">10250</text>
+    <text x="590" y="193" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">1996-07-06</text>
+    <text x="695" y="193" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">ALFKI</text>
+  </g>
+
+  <!-- Relationship arrow -->
+  <g id="relationship">
+    <path d="M 100 175 L 100 230 L 695 230 L 695 205"
+          stroke="black" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+    <!-- Arrow marker definition -->
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+      </marker>
+    </defs>
+
+    <!-- Relationship label -->
+    <text x="400" y="225" text-anchor="middle"
+          font-family="Arial, sans-serif" font-size="10" font-style="italic">
+      Foreign Key Relationship
+    </text>
+  </g>
+
+  <!-- Note about primary & foreign keys -->
+  <g id="note">
+    <text x="50" y="260" font-family="Arial, sans-serif" font-size="12" font-style="italic">
+      Note: Red circles indicate primary keys, blue circles indicate foreign keys
+    </text>
+  </g>
+</svg>

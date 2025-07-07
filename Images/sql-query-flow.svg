@@ -1,0 +1,80 @@
+<svg viewBox="0 0 1500 170" xmlns="http://www.w3.org/2000/svg">
+  <!-- Styles -->
+  <style>
+    .box { 
+      fill: white; 
+      stroke: black; 
+      stroke-width: 2; 
+      rx: 8;
+      ry: 8;
+    }
+    .header { 
+      font: bold 20px sans-serif; 
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .subtext { 
+      font: 16px sans-serif; 
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .code {
+      font: 15px monospace;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .arrow { 
+      stroke: black; 
+      stroke-width: 2; 
+      fill: none; 
+      marker-end: url(#arrowhead); 
+    }
+  </style>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black" />
+    </marker>
+  </defs>
+  
+  <!-- FROM Box -->
+  <g transform="translate(30, 20)">
+    <rect width="280" height="130" class="box" />
+    <text x="140" y="50" class="header">FROM</text>
+    <text x="140" y="90" class="subtext">Managers m</text>
+  </g>
+  
+  <!-- Arrow from FROM to JOIN -->
+  <path d="M 330 85 L 390 85" class="arrow" />
+  
+  <!-- JOIN Box -->
+  <g transform="translate(410, 20)">
+    <rect width="280" height="130" class="box" />
+    <text x="140" y="40" class="header">JOIN</text>
+    <text x="140" y="70" class="subtext">Employees e</text>
+    <text x="140" y="100" class="code">ON m.employee_id = e.reports_to</text>
+  </g>
+  
+  <!-- Arrow from JOIN to SELECT -->
+  <path d="M 710 85 L 770 85" class="arrow" />
+  
+  <!-- SELECT Box -->
+  <g transform="translate(790, 20)">
+    <rect width="280" height="130" class="box" />
+    <text x="140" y="40" class="header">SELECT</text>
+    <text x="140" y="70" class="subtext">m.name AS "Manager Name"</text>
+    <text x="140" y="95" class="subtext">e.name AS "Employee Name"</text>
+    <text x="140" y="120" class="subtext">e.revenue AS "Revenue"</text>
+  </g>
+  
+  <!-- Arrow from SELECT to ORDER BY -->
+  <path d="M 1090 85 L 1150 85" class="arrow" />
+  
+  <!-- ORDER BY Box -->
+  <g transform="translate(1170, 20)">
+    <rect width="280" height="130" class="box" />
+    <text x="140" y="50" class="header">ORDER BY</text>
+    <text x="140" y="90" class="subtext">m.name, e.name</text>
+  </g>
+</svg>

@@ -1,0 +1,86 @@
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Title -->
+    <text x="450" y="30" text-anchor="middle" font-size="22" font-weight="bold" fill="#000">
+        CTEs vs Subqueries: Organizing Complex Queries
+    </text>
+
+    <!-- Left side: Subquery approach -->
+    <g id="subquery-side">
+        <!-- Header -->
+        <rect x="30" y="110" width="400" height="30" fill="#333" stroke="#000" stroke-width="2"/>
+        <text x="230" y="130" text-anchor="middle" font-size="14" font-weight="bold" fill="white">
+            Subquery Approach
+        </text>
+
+        <!-- Code block box -->
+        <rect x="30" y="140" width="400" height="380" fill="white" stroke="#000" stroke-width="2"/>
+
+        <!-- Code -->
+        <g class="code-block" font-family="monospace" font-size="12">
+            <text x="40" y="165">SELECT</text>
+            <text x="40" y="180">    name,</text>
+            <text x="40" y="195">    total_spent,</text>
+            <text x="40" y="210">    total_spent - (</text>
+
+            <!-- First subquery -->
+            <rect x="55" y="215" width="340" height="80" fill="#ddd" stroke="#666" stroke-width="1" stroke-dasharray="2,2"/>
+            <text x="70" y="230" fill="#666">-- Subquery 1: Calculate average</text>
+            <text x="70" y="245">SELECT AVG(items_purchased * price_per_item)</text>
+            <text x="70" y="260">FROM customers</text>
+            <text x="70" y="275">WHERE items_purchased IS NOT NULL</text>
+            <text x="70" y="290">  AND price_per_item IS NOT NULL</text>
+
+            <text x="40" y="305">    ) AS above_average</text>
+            <text x="40" y="320">FROM customers</text>
+            <text x="40" y="335">WHERE total_spent &gt; (</text>
+
+            <!-- Second (identical) subquery -->
+            <rect x="55" y="340" width="340" height="80" fill="#ddd" stroke="#666" stroke-width="1" stroke-dasharray="2,2"/>
+            <text x="70" y="355" fill="#666">-- Subquery 2: Same calculation again!</text>
+            <text x="70" y="370">SELECT AVG(items_purchased * price_per_item)</text>
+            <text x="70" y="385">FROM customers</text>
+            <text x="70" y="400">WHERE items_purchased IS NOT NULL</text>
+            <text x="70" y="415">  AND price_per_item IS NOT NULL</text>
+
+            <text x="40" y="430">    )</text>
+            <text x="40" y="445">ORDER BY above_average DESC;</text>
+        </g>
+    </g>
+
+    <!-- Right side: CTE approach -->
+    <g id="cte-side">
+        <!-- Header -->
+        <rect x="470" y="110" width="400" height="30" fill="#333" stroke="#000" stroke-width="2"/>
+        <text x="670" y="130" text-anchor="middle" font-size="14" font-weight="bold" fill="white">
+            CTE Approach
+        </text>
+
+        <!-- Code block box -->
+        <rect x="470" y="140" width="400" height="380" fill="white" stroke="#000" stroke-width="2"/>
+
+        <!-- Code -->
+        <g class="code-block" font-family="monospace" font-size="12">
+            <!-- CTE definition -->
+            <rect x="475" y="145" width="390" height="115" fill="#e8f8e8" stroke="#4a4" stroke-width="2"/>
+            <text x="480" y="165">WITH avg_spending AS (</text>
+            <text x="495" y="180" fill="#666">-- Define once, reuse later</text>
+            <text x="495" y="195">SELECT AVG(items_purchased * price_per_item)</text>
+            <text x="495" y="210">AS avg_spent</text>
+            <text x="495" y="225">FROM customers</text>
+            <text x="495" y="240">WHERE items_purchased IS NOT NULL</text>
+            <text x="495" y="255">  AND price_per_item IS NOT NULL</text>
+            <text x="480" y="270">)</text>
+
+            <!-- Main query -->
+            <text x="480" y="300">SELECT</text>
+            <text x="480" y="315">    name,</text>
+            <text x="480" y="330">    total_spent,</text>
+            <text x="480" y="345">    total_spent - avg_spending.avg_spent</text>
+            <text x="480" y="360">        AS above_average</text>
+            <text x="480" y="375">FROM customers</text>
+            <text x="480" y="390">CROSS JOIN avg_spending</text>
+            <text x="480" y="405">WHERE total_spent &gt; avg_spending.avg_spent</text>
+            <text x="480" y="420">ORDER BY above_average DESC;</text>
+        </g>
+    </g>
+</svg>

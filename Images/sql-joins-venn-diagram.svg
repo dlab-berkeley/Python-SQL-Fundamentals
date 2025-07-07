@@ -1,0 +1,210 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-size="26" font-weight="bold" fill="#333">
+    SQL JOIN Types
+  </text>
+  
+  <!-- Define gradients for better visual effect -->
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90e2;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#357abd;stop-opacity:0.7" />
+    </linearGradient>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#50c878;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#3aa85a;stop-opacity:0.7" />
+    </linearGradient>
+    <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e24a4a;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#c23030;stop-opacity:0.7" />
+    </linearGradient>
+  </defs>
+  
+  <!-- LEFT JOIN -->
+  <g id="left-join">
+    <text x="150" y="90" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">
+      LEFT JOIN
+    </text>
+    
+    <!-- Venn Diagram -->
+    <g transform="translate(0, 20)">
+      <!-- Left circle (filled) -->
+      <circle cx="120" cy="160" r="60" fill="url(#blueGradient)" stroke="#333" stroke-width="2"/>
+      <!-- Right circle (outline only) -->
+      <circle cx="180" cy="160" r="60" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+      <!-- Intersection (filled) -->
+      <path d="M 150 108 A 60 60 0 0 1 150 212 A 60 60 0 0 1 150 108" 
+            fill="url(#greenGradient)" stroke="none" opacity="0.9"/>
+      
+      <!-- Labels -->
+      <text x="90" y="165" text-anchor="middle" font-size="14" font-weight="bold" fill="white">A</text>
+      <text x="210" y="165" text-anchor="middle" font-size="14" fill="#666">B</text>
+    </g>
+    
+    <!-- Example tables -->
+    <g transform="translate(0, 250)">
+      <!-- Table A -->
+      <rect x="30" y="0" width="80" height="60" fill="#f0f8ff" stroke="#333" stroke-width="1"/>
+      <rect x="30" y="0" width="80" height="20" fill="#4a90e2" stroke="#333" stroke-width="1"/>
+      <text x="70" y="15" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Table A</text>
+      <text x="70" y="35" text-anchor="middle" font-size="11">id: 1, 2, 3</text>
+      <text x="70" y="50" text-anchor="middle" font-size="11">✓ All rows</text>
+      
+      <!-- Table B -->
+      <rect x="120" y="0" width="80" height="60" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+      <rect x="120" y="0" width="80" height="20" fill="#999" stroke="#333" stroke-width="1"/>
+      <text x="160" y="15" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Table B</text>
+      <text x="160" y="35" text-anchor="middle" font-size="11">id: 2, 3, 4</text>
+      <text x="160" y="50" text-anchor="middle" font-size="11">✓ Matches only</text>
+    </g>
+    
+    <!-- Result -->
+    <rect x="50" y="330" width="130" height="25" fill="#e8f4e8" stroke="#50c878" stroke-width="2" rx="5"/>
+    <text x="115" y="347" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">
+      Result: 1, 2, 3
+    </text>
+    
+    <!-- SQL -->
+    <text x="115" y="380" text-anchor="middle" font-size="11" font-family="monospace" fill="#666">
+      SELECT * FROM A
+    </text>
+    <text x="115" y="395" text-anchor="middle" font-size="11" font-family="monospace" fill="#666">
+      LEFT JOIN B ON A.id = B.id
+    </text>
+  </g>
+  
+  <!-- INNER JOIN -->
+  <g id="inner-join">
+    <text x="450" y="90" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">
+      INNER JOIN
+    </text>
+    
+    <!-- Venn Diagram -->
+    <g transform="translate(300, 20)">
+      <!-- Left circle (outline) -->
+      <circle cx="120" cy="160" r="60" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+      <!-- Right circle (outline) -->
+      <circle cx="180" cy="160" r="60" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+      <!-- Intersection (filled) -->
+      <path d="M 150 108 A 60 60 0 0 1 150 212 A 60 60 0 0 1 150 108" 
+            fill="url(#greenGradient)" stroke="#333" stroke-width="2"/>
+      
+      <!-- Labels -->
+      <text x="90" y="165" text-anchor="middle" font-size="14" fill="#666">A</text>
+      <text x="210" y="165" text-anchor="middle" font-size="14" fill="#666">B</text>
+    </g>
+    
+    <!-- Example tables -->
+    <g transform="translate(300, 250)">
+      <!-- Table A -->
+      <rect x="30" y="0" width="80" height="60" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+      <rect x="30" y="0" width="80" height="20" fill="#999" stroke="#333" stroke-width="1"/>
+      <text x="70" y="15" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Table A</text>
+      <text x="70" y="35" text-anchor="middle" font-size="11">id: 1, 2, 3</text>
+      <text x="70" y="50" text-anchor="middle" font-size="11">✓ Matches only</text>
+      
+      <!-- Table B -->
+      <rect x="120" y="0" width="80" height="60" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+      <rect x="120" y="0" width="80" height="20" fill="#999" stroke="#333" stroke-width="1"/>
+      <text x="160" y="15" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Table B</text>
+      <text x="160" y="35" text-anchor="middle" font-size="11">id: 2, 3, 4</text>
+      <text x="160" y="50" text-anchor="middle" font-size="11">✓ Matches only</text>
+    </g>
+    
+    <!-- Result -->
+    <rect x="350" y="330" width="130" height="25" fill="#e8f4e8" stroke="#50c878" stroke-width="2" rx="5"/>
+    <text x="415" y="347" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">
+      Result: 2, 3
+    </text>
+    
+    <!-- SQL -->
+    <text x="415" y="380" text-anchor="middle" font-size="11" font-family="monospace" fill="#666">
+      SELECT * FROM A
+    </text>
+    <text x="415" y="395" text-anchor="middle" font-size="11" font-family="monospace" fill="#666">
+      INNER JOIN B ON A.id = B.id
+    </text>
+  </g>
+  
+  <!-- RIGHT JOIN -->
+  <g id="right-join">
+    <text x="750" y="90" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">
+      RIGHT JOIN
+    </text>
+    
+    <!-- Venn Diagram -->
+    <g transform="translate(600, 20)">
+      <!-- Left circle (outline only) -->
+      <circle cx="120" cy="160" r="60" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+      <!-- Right circle (filled) -->
+      <circle cx="180" cy="160" r="60" fill="url(#redGradient)" stroke="#333" stroke-width="2"/>
+      <!-- Intersection (filled) -->
+      <path d="M 150 108 A 60 60 0 0 1 150 212 A 60 60 0 0 1 150 108" 
+            fill="url(#greenGradient)" stroke="none" opacity="0.9"/>
+      
+      <!-- Labels -->
+      <text x="90" y="165" text-anchor="middle" font-size="14" fill="#666">A</text>
+      <text x="210" y="165" text-anchor="middle" font-size="14" font-weight="bold" fill="white">B</text>
+    </g>
+    
+    <!-- Example tables -->
+    <g transform="translate(600, 250)">
+      <!-- Table A -->
+      <rect x="30" y="0" width="80" height="60" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+      <rect x="30" y="0" width="80" height="20" fill="#999" stroke="#333" stroke-width="1"/>
+      <text x="70" y="15" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Table A</text>
+      <text x="70" y="35" text-anchor="middle" font-size="11">id: 1, 2, 3</text>
+      <text x="70" y="50" text-anchor="middle" font-size="11">✓ Matches only</text>
+      
+      <!-- Table B -->
+      <rect x="120" y="0" width="80" height="60" fill="#ffe8e8" stroke="#333" stroke-width="1"/>
+      <rect x="120" y="0" width="80" height="20" fill="#e24a4a" stroke="#333" stroke-width="1"/>
+      <text x="160" y="15" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Table B</text>
+      <text x="160" y="35" text-anchor="middle" font-size="11">id: 2, 3, 4</text>
+      <text x="160" y="50" text-anchor="middle" font-size="11">✓ All rows</text>
+    </g>
+    
+    <!-- Result -->
+    <rect x="650" y="330" width="130" height="25" fill="#e8f4e8" stroke="#50c878" stroke-width="2" rx="5"/>
+    <text x="715" y="347" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">
+      Result: 2, 3, 4
+    </text>
+    
+    <!-- SQL -->
+    <text x="715" y="380" text-anchor="middle" font-size="11" font-family="monospace" fill="#666">
+      SELECT * FROM A
+    </text>
+    <text x="715" y="395" text-anchor="middle" font-size="11" font-family="monospace" fill="#666">
+      RIGHT JOIN B ON A.id = B.id
+    </text>
+  </g>
+  
+  <!-- Additional explanatory text -->
+  <g transform="translate(0, 450)">
+    <rect x="50" y="20" width="800" height="100" fill="#f9f9f9" stroke="#ddd" stroke-width="1" rx="5"/>
+    
+    <text x="450" y="45" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">
+      Key Concepts
+    </text>
+    
+    <text x="100" y="70" font-size="13" fill="#333">
+      • <tspan font-weight="bold">LEFT JOIN:</tspan> All records from left table + matching records from right
+    </text>
+    <text x="100" y="90" font-size="13" fill="#333">
+      • <tspan font-weight="bold">INNER JOIN:</tspan> Only records that have matches in both tables
+    </text>
+    <text x="100" y="110" font-size="13" fill="#333">
+      • <tspan font-weight="bold">RIGHT JOIN:</tspan> All records from right table + matching records from left
+    </text>
+    
+    <text x="500" y="70" font-size="13" fill="#666">
+      • Filled areas show included records
+    </text>
+    <text x="500" y="90" font-size="13" fill="#666">
+      • Dashed lines show excluded records
+    </text>
+    <text x="500" y="110" font-size="13" fill="#666">
+      • Green intersection = matched records
+    </text>
+  </g>
+</svg>

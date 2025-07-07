@@ -1,0 +1,159 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">
+    Pivoting vs Melting (Unpivoting)
+  </text>
+  
+  <!-- Tall/Long Format Table (Left) -->
+  <g id="tall-table">
+    <text x="150" y="70" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">
+      Tall Format (Long)
+    </text>
+    
+    <!-- Table outline -->
+    <rect x="50" y="85" width="200" height="300" fill="none" stroke="#333" stroke-width="2"/>
+    
+    <!-- Headers -->
+    <rect x="50" y="85" width="200" height="30" fill="#e8f4f8" stroke="#333" stroke-width="2"/>
+    <line x1="116" y1="85" x2="116" y2="385" stroke="#333" stroke-width="1"/>
+    <line x1="183" y1="85" x2="183" y2="385" stroke="#333" stroke-width="1"/>
+    
+    <text x="83" y="105" text-anchor="middle" font-size="14" font-weight="bold">name</text>
+    <text x="149" y="105" text-anchor="middle" font-size="14" font-weight="bold">day</text>
+    <text x="216" y="105" text-anchor="middle" font-size="14" font-weight="bold">amount</text>
+    
+    <!-- Data rows -->
+    <line x1="50" y1="115" x2="250" y2="115" stroke="#333" stroke-width="1"/>
+    <text x="83" y="135" text-anchor="middle" font-size="12">John</text>
+    <text x="149" y="135" text-anchor="middle" font-size="12">Mon</text>
+    <text x="216" y="135" text-anchor="middle" font-size="12">100</text>
+    
+    <line x1="50" y1="145" x2="250" y2="145" stroke="#333" stroke-width="1"/>
+    <text x="83" y="165" text-anchor="middle" font-size="12">John</text>
+    <text x="149" y="165" text-anchor="middle" font-size="12">Tue</text>
+    <text x="216" y="165" text-anchor="middle" font-size="12">150</text>
+    
+    <line x1="50" y1="175" x2="250" y2="175" stroke="#333" stroke-width="1"/>
+    <text x="83" y="195" text-anchor="middle" font-size="12">John</text>
+    <text x="149" y="195" text-anchor="middle" font-size="12">Wed</text>
+    <text x="216" y="195" text-anchor="middle" font-size="12">200</text>
+    
+    <line x1="50" y1="205" x2="250" y2="205" stroke="#333" stroke-width="1"/>
+    <text x="83" y="225" text-anchor="middle" font-size="12">Mary</text>
+    <text x="149" y="225" text-anchor="middle" font-size="12">Mon</text>
+    <text x="216" y="225" text-anchor="middle" font-size="12">300</text>
+    
+    <line x1="50" y1="235" x2="250" y2="235" stroke="#333" stroke-width="1"/>
+    <text x="83" y="255" text-anchor="middle" font-size="12">Mary</text>
+    <text x="149" y="255" text-anchor="middle" font-size="12">Tue</text>
+    <text x="216" y="255" text-anchor="middle" font-size="12">250</text>
+    
+    <line x1="50" y1="265" x2="250" y2="265" stroke="#333" stroke-width="1"/>
+    <text x="83" y="285" text-anchor="middle" font-size="12">Mary</text>
+    <text x="149" y="285" text-anchor="middle" font-size="12">Wed</text>
+    <text x="216" y="285" text-anchor="middle" font-size="12">400</text>
+    
+    <line x1="50" y1="295" x2="250" y2="295" stroke="#333" stroke-width="1"/>
+    <text x="83" y="315" text-anchor="middle" font-size="12">Bob</text>
+    <text x="149" y="315" text-anchor="middle" font-size="12">Mon</text>
+    <text x="216" y="315" text-anchor="middle" font-size="12">180</text>
+    
+    <line x1="50" y1="325" x2="250" y2="325" stroke="#333" stroke-width="1"/>
+    <text x="83" y="345" text-anchor="middle" font-size="12">Bob</text>
+    <text x="149" y="345" text-anchor="middle" font-size="12">Tue</text>
+    <text x="216" y="345" text-anchor="middle" font-size="12">220</text>
+    
+    <line x1="50" y1="355" x2="250" y2="355" stroke="#333" stroke-width="1"/>
+    <text x="83" y="375" text-anchor="middle" font-size="12">Bob</text>
+    <text x="149" y="375" text-anchor="middle" font-size="12">Wed</text>
+    <text x="216" y="375" text-anchor="middle" font-size="12">190</text>
+  </g>
+  
+  <!-- Wide Format Table (Right) -->
+  <g id="wide-table">
+    <text x="650" y="70" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">
+      Wide Format
+    </text>
+    
+    <!-- Table outline -->
+    <rect x="500" y="85" width="300" height="130" fill="none" stroke="#333" stroke-width="2"/>
+    
+    <!-- Headers -->
+    <rect x="500" y="85" width="300" height="30" fill="#e8f4f8" stroke="#333" stroke-width="2"/>
+    <line x1="575" y1="85" x2="575" y2="215" stroke="#333" stroke-width="1"/>
+    <line x1="650" y1="85" x2="650" y2="215" stroke="#333" stroke-width="1"/>
+    <line x1="725" y1="85" x2="725" y2="215" stroke="#333" stroke-width="1"/>
+    
+    <text x="537" y="105" text-anchor="middle" font-size="14" font-weight="bold">name</text>
+    <text x="612" y="105" text-anchor="middle" font-size="14" font-weight="bold">Mon</text>
+    <text x="687" y="105" text-anchor="middle" font-size="14" font-weight="bold">Tue</text>
+    <text x="762" y="105" text-anchor="middle" font-size="14" font-weight="bold">Wed</text>
+    
+    <!-- Data rows -->
+    <line x1="500" y1="115" x2="800" y2="115" stroke="#333" stroke-width="1"/>
+    <text x="537" y="135" text-anchor="middle" font-size="12">John</text>
+    <text x="612" y="135" text-anchor="middle" font-size="12">100</text>
+    <text x="687" y="135" text-anchor="middle" font-size="12">150</text>
+    <text x="762" y="135" text-anchor="middle" font-size="12">200</text>
+    
+    <line x1="500" y1="145" x2="800" y2="145" stroke="#333" stroke-width="1"/>
+    <text x="537" y="165" text-anchor="middle" font-size="12">Mary</text>
+    <text x="612" y="165" text-anchor="middle" font-size="12">300</text>
+    <text x="687" y="165" text-anchor="middle" font-size="12">250</text>
+    <text x="762" y="165" text-anchor="middle" font-size="12">400</text>
+    
+    <line x1="500" y1="175" x2="800" y2="175" stroke="#333" stroke-width="1"/>
+    <text x="537" y="195" text-anchor="middle" font-size="12">Bob</text>
+    <text x="612" y="195" text-anchor="middle" font-size="12">180</text>
+    <text x="687" y="195" text-anchor="middle" font-size="12">220</text>
+    <text x="762" y="195" text-anchor="middle" font-size="12">190</text>
+  </g>
+  
+  <!-- Arrows -->
+  <!-- Top arrow (Pivot) -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+            refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2" />
+    </marker>
+  </defs>
+  
+  <!-- Pivot arrow -->
+  <path d="M 280 150 Q 400 120 470 150" 
+        stroke="#4a90e2" stroke-width="3" fill="none" 
+        marker-end="url(#arrowhead)"/>
+  <rect x="340" y="105" width="120" height="30" fill="white" rx="5"/>
+  <text x="400" y="125" text-anchor="middle" font-size="16" font-weight="bold" fill="#4a90e2">
+    PIVOT →
+  </text>
+  
+  <!-- Melt arrow -->
+  <path d="M 470 250 Q 400 280 280 250" 
+        stroke="#e24a4a" stroke-width="3" fill="none" 
+        marker-end="url(#arrowhead)"/>
+  <rect x="310" y="265" width="180" height="30" fill="white" rx="5"/>
+  <text x="400" y="285" text-anchor="middle" font-size="16" font-weight="bold" fill="#e24a4a">
+    ← MELT (UNPIVOT)
+  </text>
+  
+  <!-- Descriptions -->
+  <text x="150" y="420" text-anchor="middle" font-size="14" fill="#666">
+    • Many rows
+  </text>
+  <text x="150" y="440" text-anchor="middle" font-size="14" fill="#666">
+    • Few columns
+  </text>
+  <text x="150" y="460" text-anchor="middle" font-size="14" fill="#666">
+    • Values in rows
+  </text>
+  
+  <text x="650" y="420" text-anchor="middle" font-size="14" fill="#666">
+    • Few rows
+  </text>
+  <text x="650" y="440" text-anchor="middle" font-size="14" fill="#666">
+    • Many columns
+  </text>
+  <text x="650" y="460" text-anchor="middle" font-size="14" fill="#666">
+    • Values in columns
+  </text>
+</svg>

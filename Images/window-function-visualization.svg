@@ -1,0 +1,227 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">
+    Window Functions: SUM() OVER (PARTITION BY department)
+  </text>
+  
+  <!-- Define patterns for visual grouping -->
+  <defs>
+    <pattern id="deptA" x="0" y="0" width="100%" height="100%">
+      <rect width="100%" height="100%" fill="#e8f4ff" opacity="0.7"/>
+    </pattern>
+    <pattern id="deptB" x="0" y="0" width="100%" height="100%">
+      <rect width="100%" height="100%" fill="#ffe8e8" opacity="0.7"/>
+    </pattern>
+  </defs>
+  
+  <!-- Original Table -->
+  <g id="original-table">
+    <text x="200" y="80" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">
+      Original Table
+    </text>
+    
+    <!-- Table outline -->
+    <rect x="50" y="100" width="300" height="310" fill="none" stroke="#333" stroke-width="2"/>
+    
+    <!-- Headers -->
+    <rect x="50" y="100" width="300" height="35" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <line x1="150" y1="100" x2="150" y2="410" stroke="#333" stroke-width="1"/>
+    <line x1="250" y1="100" x2="250" y2="410" stroke="#333" stroke-width="2"/>
+    
+    <text x="100" y="123" text-anchor="middle" font-size="14" font-weight="bold">employee</text>
+    <text x="200" y="123" text-anchor="middle" font-size="14" font-weight="bold">department</text>
+    <text x="300" y="123" text-anchor="middle" font-size="14" font-weight="bold">salary</text>
+    
+    <!-- Mixed rows with department highlighting -->
+    <!-- Row 1: Alice (Sales) -->
+    <rect x="50" y="135" width="300" height="35" fill="url(#deptA)" stroke="none"/>
+    <line x1="50" y1="135" x2="350" y2="135" stroke="#333" stroke-width="1"/>
+    <text x="100" y="158" text-anchor="middle" font-size="14">Alice</text>
+    <text x="200" y="158" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a90e2">Sales</text>
+    <text x="300" y="158" text-anchor="middle" font-size="14">5000</text>
+    
+    <!-- Row 2: David (IT) -->
+    <rect x="50" y="170" width="300" height="35" fill="url(#deptB)" stroke="none"/>
+    <line x1="50" y1="170" x2="350" y2="170" stroke="#333" stroke-width="1"/>
+    <text x="100" y="193" text-anchor="middle" font-size="14">David</text>
+    <text x="200" y="193" text-anchor="middle" font-size="14" font-weight="bold" fill="#e24a4a">IT</text>
+    <text x="300" y="193" text-anchor="middle" font-size="14">7000</text>
+    
+    <!-- Row 3: Bob (Sales) -->
+    <rect x="50" y="205" width="300" height="35" fill="url(#deptA)" stroke="none"/>
+    <line x1="50" y1="205" x2="350" y2="205" stroke="#333" stroke-width="1"/>
+    <text x="100" y="228" text-anchor="middle" font-size="14">Bob</text>
+    <text x="200" y="228" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a90e2">Sales</text>
+    <text x="300" y="228" text-anchor="middle" font-size="14">6000</text>
+    
+    <!-- Row 4: Emma (IT) -->
+    <rect x="50" y="240" width="300" height="35" fill="url(#deptB)" stroke="none"/>
+    <line x1="50" y1="240" x2="350" y2="240" stroke="#333" stroke-width="1"/>
+    <text x="100" y="263" text-anchor="middle" font-size="14">Emma</text>
+    <text x="200" y="263" text-anchor="middle" font-size="14" font-weight="bold" fill="#e24a4a">IT</text>
+    <text x="300" y="263" text-anchor="middle" font-size="14">8000</text>
+    
+    <!-- Row 5: Frank (IT) -->
+    <rect x="50" y="275" width="300" height="35" fill="url(#deptB)" stroke="none"/>
+    <line x1="50" y1="275" x2="350" y2="275" stroke="#333" stroke-width="1"/>
+    <text x="100" y="298" text-anchor="middle" font-size="14">Frank</text>
+    <text x="200" y="298" text-anchor="middle" font-size="14" font-weight="bold" fill="#e24a4a">IT</text>
+    <text x="300" y="298" text-anchor="middle" font-size="14">5500</text>
+    
+    <!-- Row 6: Charlie (Sales) -->
+    <rect x="50" y="310" width="300" height="35" fill="url(#deptA)" stroke="none"/>
+    <line x1="50" y1="310" x2="350" y2="310" stroke="#333" stroke-width="1"/>
+    <text x="100" y="333" text-anchor="middle" font-size="14">Charlie</text>
+    <text x="200" y="333" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a90e2">Sales</text>
+    <text x="300" y="333" text-anchor="middle" font-size="14">4000</text>
+    
+    <!-- Row 7: Grace (IT) -->
+    <rect x="50" y="345" width="300" height="35" fill="url(#deptB)" stroke="none"/>
+    <line x1="50" y1="345" x2="350" y2="345" stroke="#333" stroke-width="1"/>
+    <text x="100" y="368" text-anchor="middle" font-size="14">Grace</text>
+    <text x="200" y="368" text-anchor="middle" font-size="14" font-weight="bold" fill="#e24a4a">IT</text>
+    <text x="300" y="368" text-anchor="middle" font-size="14">6500</text>
+    
+    <!-- Row 8: Henry (IT) -->
+    <rect x="50" y="380" width="300" height="30" fill="url(#deptB)" stroke="none"/>
+    <line x1="50" y1="380" x2="350" y2="380" stroke="#333" stroke-width="1"/>
+    <text x="100" y="403" text-anchor="middle" font-size="14">Henry</text>
+    <text x="200" y="403" text-anchor="middle" font-size="14" font-weight="bold" fill="#e24a4a">IT</text>
+    <text x="300" y="403" text-anchor="middle" font-size="14">3000</text>
+  </g>
+  
+  <!-- Arrow -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" 
+            refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+    </marker>
+  </defs>
+  
+  <path d="M 380 255 L 470 255" 
+        stroke="#666" stroke-width="3" fill="none" 
+        marker-end="url(#arrow)"/>
+  
+  <!-- Result Table with Window Function -->
+  <g id="result-table">
+    <text x="650" y="80" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">
+      After Window Function
+    </text>
+    
+    <!-- Table outline -->
+    <rect x="500" y="100" width="350" height="310" fill="none" stroke="#333" stroke-width="2"/>
+    
+    <!-- Headers -->
+    <rect x="500" y="100" width="350" height="35" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <line x1="600" y1="100" x2="600" y2="410" stroke="#333" stroke-width="1"/>
+    <line x1="700" y1="100" x2="700" y2="410" stroke="#333" stroke-width="1"/>
+    <line x1="750" y1="100" x2="750" y2="410" stroke="#333" stroke-width="2"/>
+    
+    <text x="550" y="123" text-anchor="middle" font-size="14" font-weight="bold">employee</text>
+    <text x="650" y="123" text-anchor="middle" font-size="14" font-weight="bold">dept</text>
+    <text x="725" y="123" text-anchor="middle" font-size="14" font-weight="bold">salary</text>
+    <text x="800" y="115" text-anchor="middle" font-size="14" font-weight="bold">dept_total</text>
+    <text x="800" y="130" text-anchor="middle" font-size="11" fill="#666">(window)</text>
+    
+    <!-- Mixed rows matching original table order -->
+    <!-- Row 1: Alice (Sales) -->
+    <rect x="500" y="135" width="350" height="35" fill="url(#deptA)" stroke="none"/>
+    <line x1="500" y1="135" x2="850" y2="135" stroke="#333" stroke-width="1"/>
+    <text x="550" y="158" text-anchor="middle" font-size="13">Alice</text>
+    <text x="650" y="158" text-anchor="middle" font-size="13" fill="#4a90e2">Sales</text>
+    <text x="725" y="158" text-anchor="middle" font-size="13">5000</text>
+    <rect x="760" y="145" width="80" height="20" fill="#4a90e2" fill-opacity="0.3" stroke="#4a90e2" stroke-width="1" rx="3"/>
+    <text x="800" y="158" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">15000</text>
+    
+    <!-- Row 2: David (IT) -->
+    <rect x="500" y="170" width="350" height="35" fill="url(#deptB)" stroke="none"/>
+    <line x1="500" y1="170" x2="850" y2="170" stroke="#333" stroke-width="1"/>
+    <text x="550" y="193" text-anchor="middle" font-size="13">David</text>
+    <text x="650" y="193" text-anchor="middle" font-size="13" fill="#e24a4a">IT</text>
+    <text x="725" y="193" text-anchor="middle" font-size="13">7000</text>
+    <rect x="760" y="180" width="80" height="20" fill="#e24a4a" fill-opacity="0.3" stroke="#e24a4a" stroke-width="1" rx="3"/>
+    <text x="800" y="193" text-anchor="middle" font-size="13" font-weight="bold" fill="#e24a4a">30000</text>
+    
+    <!-- Row 3: Bob (Sales) -->
+    <rect x="500" y="205" width="350" height="35" fill="url(#deptA)" stroke="none"/>
+    <line x1="500" y1="205" x2="850" y2="205" stroke="#333" stroke-width="1"/>
+    <text x="550" y="228" text-anchor="middle" font-size="13">Bob</text>
+    <text x="650" y="228" text-anchor="middle" font-size="13" fill="#4a90e2">Sales</text>
+    <text x="725" y="228" text-anchor="middle" font-size="13">6000</text>
+    <rect x="760" y="215" width="80" height="20" fill="#4a90e2" fill-opacity="0.3" stroke="#4a90e2" stroke-width="1" rx="3"/>
+    <text x="800" y="228" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">15000</text>
+    
+    <!-- Row 4: Emma (IT) -->
+    <rect x="500" y="240" width="350" height="35" fill="url(#deptB)" stroke="none"/>
+    <line x1="500" y1="240" x2="850" y2="240" stroke="#333" stroke-width="1"/>
+    <text x="550" y="263" text-anchor="middle" font-size="13">Emma</text>
+    <text x="650" y="263" text-anchor="middle" font-size="13" fill="#e24a4a">IT</text>
+    <text x="725" y="263" text-anchor="middle" font-size="13">8000</text>
+    <rect x="760" y="250" width="80" height="20" fill="#e24a4a" fill-opacity="0.3" stroke="#e24a4a" stroke-width="1" rx="3"/>
+    <text x="800" y="263" text-anchor="middle" font-size="13" font-weight="bold" fill="#e24a4a">30000</text>
+    
+    <!-- Row 5: Frank (IT) -->
+    <rect x="500" y="275" width="350" height="35" fill="url(#deptB)" stroke="none"/>
+    <line x1="500" y1="275" x2="850" y2="275" stroke="#333" stroke-width="1"/>
+    <text x="550" y="298" text-anchor="middle" font-size="13">Frank</text>
+    <text x="650" y="298" text-anchor="middle" font-size="13" fill="#e24a4a">IT</text>
+    <text x="725" y="298" text-anchor="middle" font-size="13">5500</text>
+    <rect x="760" y="285" width="80" height="20" fill="#e24a4a" fill-opacity="0.3" stroke="#e24a4a" stroke-width="1" rx="3"/>
+    <text x="800" y="298" text-anchor="middle" font-size="13" font-weight="bold" fill="#e24a4a">30000</text>
+    
+    <!-- Row 6: Charlie (Sales) -->
+    <rect x="500" y="310" width="350" height="35" fill="url(#deptA)" stroke="none"/>
+    <line x1="500" y1="310" x2="850" y2="310" stroke="#333" stroke-width="1"/>
+    <text x="550" y="333" text-anchor="middle" font-size="13">Charlie</text>
+    <text x="650" y="333" text-anchor="middle" font-size="13" fill="#4a90e2">Sales</text>
+    <text x="725" y="333" text-anchor="middle" font-size="13">4000</text>
+    <rect x="760" y="320" width="80" height="20" fill="#4a90e2" fill-opacity="0.3" stroke="#4a90e2" stroke-width="1" rx="3"/>
+    <text x="800" y="333" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">15000</text>
+    
+    <!-- Row 7: Grace (IT) -->
+    <rect x="500" y="345" width="350" height="35" fill="url(#deptB)" stroke="none"/>
+    <line x1="500" y1="345" x2="850" y2="345" stroke="#333" stroke-width="1"/>
+    <text x="550" y="368" text-anchor="middle" font-size="13">Grace</text>
+    <text x="650" y="368" text-anchor="middle" font-size="13" fill="#e24a4a">IT</text>
+    <text x="725" y="368" text-anchor="middle" font-size="13">6500</text>
+    <rect x="760" y="355" width="80" height="20" fill="#e24a4a" fill-opacity="0.3" stroke="#e24a4a" stroke-width="1" rx="3"/>
+    <text x="800" y="368" text-anchor="middle" font-size="13" font-weight="bold" fill="#e24a4a">30000</text>
+    
+    <!-- Row 8: Henry (IT) -->
+    <rect x="500" y="380" width="350" height="30" fill="url(#deptB)" stroke="none"/>
+    <line x1="500" y1="380" x2="850" y2="380" stroke="#333" stroke-width="1"/>
+    <text x="550" y="403" text-anchor="middle" font-size="13">Henry</text>
+    <text x="650" y="403" text-anchor="middle" font-size="13" fill="#e24a4a">IT</text>
+    <text x="725" y="403" text-anchor="middle" font-size="13">3000</text>
+    <rect x="760" y="390" width="80" height="20" fill="#e24a4a" fill-opacity="0.3" stroke="#e24a4a" stroke-width="1" rx="3"/>
+    <text x="800" y="403" text-anchor="middle" font-size="13" font-weight="bold" fill="#e24a4a">30000</text>
+  </g>
+  
+  
+  <!-- SQL explanation -->
+  <rect x="50" y="440" width="800" height="120" fill="#f9f9f9" stroke="#ddd" stroke-width="1" rx="5"/>
+  
+  <text x="450" y="465" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">
+    SQL Window Function
+  </text>
+  
+  <text x="60" y="490" font-family="monospace" font-size="12" fill="#666">
+    SELECT employee, department, salary,
+  </text>
+  <text x="60" y="510" font-family="monospace" font-size="12" fill="#666">
+           SUM(salary) OVER (PARTITION BY department) AS dept_total
+  </text>
+  <text x="60" y="530" font-family="monospace" font-size="12" fill="#666">
+    FROM employees;
+  </text>
+  
+  <text x="500" y="490" font-size="13" fill="#333">
+    • Window functions preserve all rows (unlike GROUP BY)
+  </text>
+  <text x="500" y="510" font-size="13" fill="#333">
+    • PARTITION BY creates separate "windows" for each department
+  </text>
+  <text x="500" y="530" font-size="13" fill="#333">
+    • Each row gets the aggregate value for its partition
+  </text>
+</svg>

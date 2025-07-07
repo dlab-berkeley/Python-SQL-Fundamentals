@@ -1,0 +1,23 @@
+name,income_source,amount,day
+John Smith,Salary,3000.0,Monday
+John Smith,Freelance,500.0,Friday
+Maria Garcia,Salary,2500.0,Monday
+Maria Garcia,Bonus,1000.0,Friday
+Li Wei,Salary,,Monday
+Li Wei,Investment,200.0,Wednesday
+Ahmed Hassan,Salary,3500.0,Monday
+Ahmed Hassan,Consulting,1500.0,Tuesday
+Ahmed Hassan,Rental,800.0,Thursday
+Sarah Johnson,Salary,,Monday
+Sarah Johnson,Teaching,400.0,Wednesday
+Yuki Tanaka,Salary,3200.0,Monday
+Elena Popov,Pension,1800.0,Friday
+Lars Andersen,Salary,4500.0,Monday
+Diego Martinez,Salary,2700.0,Monday
+Mary Williams,Part-time,1200.0,Tuesday
+Jennifer Wilson,Salary,3100.0,Monday
+Robert Taylor,Salary,2900.0,Monday
+Robert Taylor,Uber,600.0,Saturday
+Amanda Lee,Freelance,2200.0,Thursday
+Michael Brown,Salary,3400.0,Monday
+Patricia Davis,Consulting,4000.0,Wednesday
