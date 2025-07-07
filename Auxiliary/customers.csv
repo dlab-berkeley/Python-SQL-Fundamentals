@@ -1,0 +1,26 @@
+name,city,country,items_purchased,price_per_item,last_purchase,account_balance
+John Smith,New York,US,,56.28,,945.55
+Maria Garcia,London,GB,15.0,,2024-08-18,905.34
+Li Wei,Tokyo,JP,11.0,14.18,2024-02-10,638.11
+Emma Brown,Paris,FR,8.0,64.68,2024-01-28,929.69
+Ahmed Hassan,Sydney,AU,7.0,25.35,2024-05-14,179.64
+Sarah Johnson,Berlin,DE,19.0,15.85,2024-07-19,
+Carlos Rodriguez,Mumbai,IN,11.0,95.4,2024-11-23,140.7
+Anna Kowalski,São Paulo,BR,11.0,96.91,2024-09-24,392.8
+James Wilson,Toronto,CA,4.0,82.76,2024-02-02,449.81
+Yuki Tanaka,Shanghai,CN,8.0,37.42,2024-02-17,344.21
+Elena Popov,Madrid,ES,3.0,18.79,2024-03-02,845.86
+Michel Dubois,Moscow,RU,2.0,71.58,2024-08-03,421.08
+Sofia Santos,Dubai,AE,12.0,49.61,2024-10-19,352.84
+Lars Andersen,,,6.0,20.98,2024-04-08,588.43
+Aisha Patel,Mexico City,MX,2.0,54.57,2024-06-20,226.83
+Diego Martinez,Amsterdam,NL,1.0,13.09,2024-12-25,821.98
+Lucy Chen,Cairo,EG,12.0,91.84,2024-08-01,167.1
+Ivan Petrov,Stockholm,SE,12.0,33.29,2024-02-04,988.2
+Mary Williams,,,17.0,69.63,2024-08-14,795.02
+Raj Kumar,Los Angeles,US,10.0,38.05,2024-04-10,
+Hans Schmidt,Rome,IT,16.0,,,104.97
+Isabella Silva,Hong Kong,HK,15.0,59.2,2024-09-13,833.92
+Fatima Al-Said,Istanbul,TR,,26.64,,736.17
+Jun Park,Seoul,KR,19.0,97.26,2024-08-05,756.11
+Anna Ivanova,Bangkok,TH,12.0,79.76,2024-09-11,794.14

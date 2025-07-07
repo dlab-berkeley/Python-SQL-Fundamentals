@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Open SQL Workshop Notebook",
+			"type": "shell",
+			"command": "code",
+			"args": [
+				"Lessons/SQL2.0.ipynb"
+			],
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}
