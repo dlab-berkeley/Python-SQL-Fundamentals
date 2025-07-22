@@ -69,8 +69,9 @@ Here are other Python workshops offered by the D-Lab:
 
 ### Basic competency
 
-* [SQL Fundamentals](https://github.com/dlab-berkeley/SQL-Fundamentals/)
-* [Python Data Wrangling and Manipulation with Pandas](https://dlab.berkeley.edu/events/python-data-wrangling-and-manipulation-pandas/2024-10-10)
+* [SQL Intermediate](https://github.com/dlab-berkeley/Python-SQL-Intermediate)
+* [Python Fundamentald](https://github.com/dlab-berkeley/Python-Fundamentals)
+* [Python Data Wrangling and Manipulation with Pandas](https://github.com/dlab-berkeley/Python-Data-Wrangling)
 
 # Contributors
 * Bruno Smaniotto
