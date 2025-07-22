@@ -1,93 +1,61 @@
-# D-Lab [WorkshopName] Workshop
+# D-Lab Python SQL Fundamentals Workshop
 
-[![DataHub](https://img.shields.io/badge/launch-datahub-blue)](DATAHUB_LINK_HERE)
-[![Binder](https://mybinder.org/badge_logo.svg)](BINDER_LINK_HERE)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Datahub](https://img.shields.io/badge/launch-datahub-blue)](http://dlab.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fdlab-berkeley%2FSQL-Fundamentals&urlpath=lab%2Ftree%2FSQL-Fundamentals%2F) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dlab-berkeley/SQL-Fundamentals/HEAD) [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-This repository contains the materials for D-Lab [WorkshopName] workshop. 
+This repository contains the materials for D-Lab’s Python SQL Fundamentals workshop series. 
 
 ### Prerequisites
-We recommend attending [D-LabWorkshop1](D-LabWorkshop1Link),
-[D-LabWorkshop2](D-LabWorkshop2Link), and
-[AdditionalWorkshopsAsNeeded](LinksToWorkshops) prior to this workshop.
+No prior experience with SQL or Python is required.
 
 Check D-Lab's [Learning Pathways](https://dlab-berkeley.github.io/dlab-workshops/python_path.html) to figure out which of our workshops to take!
 
+
 ## Workshop Goals
 
-In this workshop, we provide [WorkshopGoal]. First, we’ll cover [Aim1]. Then,
-we’ll explore [Aim2]. 
-
-_Only if necessary:_ If you are not familiar with material in
-[D-LabWorkshop1](D-LabWorkshop1Link), [D-LabWorkshop2](D-LabWorkshop2Link), and
-[AdditionalWorkshopsAsNeeded](LinksToWorkshops), we recommend attending those
-workshops first.
+This workshop introduces the fundamentals of SQL in Python, with a focus on using SQLite (the most ubiquitous database on the planet) for data science tasks. We'll explore how SQL can be used to query and manipulate relational databases. This hands-on workshop includes exercises based on real-world datasets.
 
 ## Learning Objectives
 
-After this workshop, you will be able to:
+After completing SQL Fundamentals, you will be able to:
+- Navigate and understand the structure of a relational database.
+- Become familiar with relational database concepts.
+- Have basic understanding of SQL syntax (e.g., `SELECT`, `FROM`, `WHERE` clauses).
+- Write SQL queries to select, filter, and sort data.
+- Perform complex joins between tables to retrieve related data.
+- Use aggregate functions to summarize data.
+    
+This workshop does **not** cover the following:
+- Joins, Subqueries, Common Table Expressions (CTEs) and Window functions - covered in [SQL Intermediate](https://github.com/dlab-berkeley/Python-SQL-Intermediate)
+- Cloud Databases or Database Servers - covered in [Cloud SQL Databases](https://github.com/dlab-berkeley/Cloud-SQL-Databases).
 
-- [LearningObjective1].
-- [LearningObjective2].
-- [LearningObjective3].
+## Workshop Structure
 
-This workshop does not cover the following:
+SQL Fundamentals is a 2 hour workshop, and is delivered in a lecture-style coding walkthrough interrupted by challenge problems and a break. Instructors and TAs are dedicated to engaging you in the classroom and answering questions in plain language.
 
-- [NotCovered1]. These are covered in [D-LabWorkshopName](URL).
-- [NotCovered2]. These are covered in [D-LabWorkshopName](URL).
-
+1. **[Part 1: SQLite Installation](SQLite-Setup.ipynb)**
+2. **[Part 2: Simple SQLite Queries](Simple-SQLite-Lesson.ipynb)**
+3. **[Part 3: Northwind Database Overview](SQL-Northwind-Lesson-Overview.ipynb)**
+4. **[Part 4: Northwind SQLite Exercises](SQL-Northwind-Lesson-Exercises.ipynb)**
 
 ## Installation Instructions
 
-We will use [RStudio/Python] to go through the workshop materials, which requires installation of [Software]. Complete the following steps:
+Before attending the workshop, you should install Python and Jupyter to your computer. If you need help, please submit a [consulting request](https://dlab.berkeley.edu/consulting/submit-consulting-request) with D-Lab prior to the start of the workshop.
 
-1. This step(s) details software to download, with a link.
-2. Download these workshop materials:
-    * Click the green "Code" button in the top right of the repository information.
-    * Click "Download Zip".
-    * Extract this file to a folder on your computer where you can easily access it (we recommend Desktop).
-3. Optional: if you’re familiar with git, you can instead clone this repository by opening a terminal and entering [GitCloneCommand].
+Then follow the steps in the [installation instructions notebook](SQLite-Setup.ipynb)
 
-## Is [Language] not Working on Your Computer?
+## Is Python not working on your laptop?
 
-If you do not have [Language] installed and the materials loaded on your
-workshop by the time it starts, we *strongly* recommend using the UC Berkeley
-Datahub to run the materials for these lessons. You can access the DataHub by
-clicking the following button:
+If you do not have Anaconda installed and the materials loaded on your workshop by the time it starts, we *strongly* recommend using the UC Berkeley Datahub to run the materials for these lessons. You can access the DataHub by clicking this button:
 
-[![DataHub](https://img.shields.io/badge/launch-datahub-blue)](DATAHUB_LINK_HERE)
+[![Datahub](https://img.shields.io/badge/launch-datahub-blue)](http://dlab.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fdlab-berkeley%2FSQL-Fundamentals&urlpath=lab%2Ftree%2FSQL-Fundamentals%2F)
 
-The DataHub downloads this repository, along with any necessary packages, and
-allows you to run the materials in an RStudio instance on UC Berkeley's servers.
-No installation is necessary from your end - you only need an internet browser
-and a CalNet ID to log in. By using the DataHub, you can save your work and come
-back to it at any time. When you want to return to your saved work, just go
-straight to the [D-Lab DataHub](https://dlab.datahub.berkeley.edu), sign in, and
-you click on the `[Workshop-Name]` folder.
+The DataHub downloads this repository, along with any necessary packages, and allows you to run the materials in a Jupyter notebook that is stored on UC Berkeley's servers. No installation is necessary from your end - you only need an internet browser and a CalNet ID to log in. By using the DataHub, you can save your work and come back to it at any time. When you want to return to your saved work, just go straight to [DataHub](https://datahub.berkeley.edu), sign in, and you click on the `SQL-Fundamentals` folder.
 
-If you don't have a Berkeley CalNet ID, you can still run these lessons in the cloud, by clicking this button:
+If you don't have a Berkeley CalNet ID, you can still run these lessons in Binder, which is another cloud-based option. Click this button:
 
-[![Binder](https://mybinder.org/badge_logo.svg)](BINDER_LINK_HERE)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dlab-berkeley/SQL-Fundamentals/HEAD)
 
-By using this button, however, you cannot save your work.
-
-
-## Run the Code
-
-Now that you have all the required software and materials, you need to run the code:
-
-Provide instructions on running the code, including how to load relevant software (RStudio, Jupyter Notebooks, etc.) and which file to open up. See other repositories for examples.
-
-Additionally, provide instructions on how to run code once it’s open (running Jupyter cells, RMarkdown cells, etc.).
-
-# Additional Resources
-
-Check out the following resources to learn more about [Workshop topics]:
-
-* [Resource1](LinkToResource1): _Explain Resource 1_
-* [Resource2](LinkToResource2): _Explain Resource 2_
-* [...]
-
+Note: Using Binder, you unfortunately cannot save your work.
 
 # About the UC Berkeley D-Lab
 
@@ -95,19 +63,15 @@ D-Lab works with Berkeley faculty, research staff, and students to advance data-
 
 Visit the [D-Lab homepage](https://dlab.berkeley.edu/) to learn more about us. You can view our [calendar](https://dlab.berkeley.edu/events/calendar) for upcoming events, learn about how to utilize our [consulting](https://dlab.berkeley.edu/consulting) and [data](https://dlab.berkeley.edu/data) services, and check out upcoming [workshops](https://dlab.berkeley.edu/events/workshops).
 
-# Other D-Lab [Language] Workshops
+# Other D-Lab Python Workshops
 
-Here are other [Language] workshops offered by the D-Lab:
+Here are other Python workshops offered by the D-Lab:
 
-## Basic Competency
+### Basic competency
 
-**Provide a list of workshops here.**
-
-## Intermediate/Advanced Competency
-
-**Provide a list of workshops here.**
+* [SQL Fundamentals](https://github.com/dlab-berkeley/SQL-Fundamentals/)
+* [Python Data Wrangling and Manipulation with Pandas](https://dlab.berkeley.edu/events/python-data-wrangling-and-manipulation-pandas/2024-10-10)
 
 # Contributors
-
-**Provide a list of contributors here, with links to their webpages (D-Lab or
-private).**
+* Aaron Culich
+* Tom van Nuenen
