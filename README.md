@@ -73,5 +73,5 @@ Here are other Python workshops offered by the D-Lab:
 * [Python Data Wrangling and Manipulation with Pandas](https://dlab.berkeley.edu/events/python-data-wrangling-and-manipulation-pandas/2024-10-10)
 
 # Contributors
-* Aaron Culich
+* Bruno Smaniotto
 * Tom van Nuenen
