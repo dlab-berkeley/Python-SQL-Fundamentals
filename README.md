@@ -63,15 +63,19 @@ D-Lab works with Berkeley faculty, research staff, and students to advance data-
 
 Visit the [D-Lab homepage](https://dlab.berkeley.edu/) to learn more about us. You can view our [calendar](https://dlab.berkeley.edu/events/calendar) for upcoming events, learn about how to utilize our [consulting](https://dlab.berkeley.edu/consulting) and [data](https://dlab.berkeley.edu/data) services, and check out upcoming [workshops](https://dlab.berkeley.edu/events/workshops).
 
-# Other D-Lab Python Workshops
-
-Here are other Python workshops offered by the D-Lab:
-
 ### Basic competency
 
-* [SQL Intermediate](https://github.com/dlab-berkeley/Python-SQL-Intermediate)
 * [Python Fundamentals](https://github.com/dlab-berkeley/Python-Fundamentals)
-* [Python Data Wrangling and Manipulation with Pandas](https://github.com/dlab-berkeley/Python-Data-Wrangling)
+* [Python GPT Fundamentals](https://github.com/dlab-berkeley/python-gpt-fundamentals)
+* [Python Data Wrangling](https://github.com/dlab-berkeley/Python-Data-Wrangling)
+* [Python Data Visualization](https://github.com/dlab-berkeley/Python-Data-Visualization)
+* [Geospatial Fundamentals in Python](https://github.com/dlab-berkeley/Geospatial-Fundamentals-in-Python)
+
+### Intermediate/advanced competency
+
+* [Python Text Analysis](https://github.com/dlab-berkeley/python-text-analysis)
+* [Python Machine Learning](https://github.com/dlab-berkeley/python-machine-learning)
+* [Python Deep Learning](https://github.com/dlab-berkeley/python-deep-learning)
 
 # Contributors
 * Bruno Smaniotto
